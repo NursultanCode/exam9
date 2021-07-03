@@ -18,11 +18,14 @@
             <div class="nav-wrapper">
                 <div class="container">
                     <ul id="nav-left" class="left hide-on-med-and-down">
-
+                        <li><a class="nav-link" href="/topics">All Topics</a></li>
+                        <li sec:authorize="isAuthenticated()"><a class="nav-link" href="/profile">Add topic</a></li>
                     </ul>
                     <ul id="nav-right" class="right hide-on-med-and-down">
-                        <li><a th:href="@{'/profile'}">Profile</a></li>
-                        <li><a th:href="@{'/logout'}">Logout</a></li>
+                            <li sec:authorize="isAnonymous()"><a class="nav-link" href="/login">Login</a></li>
+                            <li sec:authorize="isAnonymous()"><a class="nav-link" href="/register">Register</a></li>
+                            <li sec:authorize="isAuthenticated()"><a class="nav-link" href="/logout">Logout</a></li>
+                            <li sec:authorize="isAuthenticated()"><a class="nav-link" href="/profile">Profile</a></li>
                     </ul>
                 </div>
             </div>
