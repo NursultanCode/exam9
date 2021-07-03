@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="description" content="Programming forum about Java powered by Spring Framework"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <title>Internet Forum</title>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-wrapper">
+                <div class="container">
+                    <ul id="nav-left" class="left hide-on-med-and-down">
+
+                    </ul>
+                    <ul id="nav-right" class="right hide-on-med-and-down">
+                        <li><a th:href="@{'/profile'}">Profile</a></li>
+                        <li><a th:href="@{'/logout'}">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main layout:fragment="content">
+            <p>Default content</p>
+        </main>
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Forum</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    All rights reserved &nbsp;|&nbsp; Nursultan &nbsp;|&nbsp; 2021
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>
