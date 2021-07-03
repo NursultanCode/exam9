@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface AnswerRepository extends JpaRepository<Answer,Long> {
     List<Answer> findAnswerByTopic_Id(Long topicId);
+    Long countAnswersByTopic_Id(Long topic_id);
 }

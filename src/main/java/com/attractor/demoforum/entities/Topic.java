@@ -19,11 +19,7 @@ public class Topic {
     private String title;
     @Column(nullable = false, length = 1024)
     private String content;
-    @Column(nullable = false, length = 16)
-    private String category;
     private LocalDateTime createdDate;
-    @Column(length = 1024)
-    private String code;
     @ManyToOne
     @JoinColumn(name = "id_user")
     private User user;

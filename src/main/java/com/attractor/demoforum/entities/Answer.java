@@ -19,8 +19,6 @@ public class Answer {
     @Column(nullable = false)
     private boolean useful;
     private LocalDateTime createdDate;
-    @Column(length = 1024)
-    private String code;
     @ManyToOne
     @JoinColumn(name = "id_user")
     private User user;
